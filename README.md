@@ -125,13 +125,17 @@ Distilled checkpoints (Qwen3.5-9B base, LoRA SFT on reviewed trajectories):
 
 ## Citation
 
-Paper: [Harness-Zero: Harness Distillation via Agent-as-Harness](assets/Harness-Zero%20Harness%20Distillation%20via%20Agent-as-Harness.pdf)
+Paper: [Harness-Zero: Harness Distillation via Agent-as-Harness](https://arxiv.org/abs/2609.24974)
 
 ```bibtex
-@article{ye2026harnesszero,
-  title  = {Harness-Zero: Harness Distillation via Agent-as-Harness},
-  author = {Ye, Haoran and Lu, Yuxing and Dong, Haonan and Su, Zhaochen and Song, Guojie},
-  year   = {2026}
+@misc{ye2026harnesszeroharnessdistillationagentasharness,
+      title={Harness-Zero: Harness Distillation via Agent-as-Harness}, 
+      author={Haoran Ye and Yuxing Lu and Haonan Dong and Zhaochen Su and Guojie Song},
+      year={2026},
+      eprint={2609.24974},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2609.24974}, 
 }
 ```
 
