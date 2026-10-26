@@ -191,7 +191,7 @@ def train_positive_sft(
     seed: int,
     run_name: str,
     output_dir: Path,
-    checkpoint_epochs: tuple[float, ...] = (0.5, 1.0, 2.0, 3.0),
+    checkpoint_epochs: tuple[float, ...] | None = None,
     resume_from: str | None = None,
 ) -> dict[str, Any]:
     import tinker
@@ -222,6 +222,10 @@ def train_positive_sft(
         raise ValueError("warmup_ratio must be in [0, 1)")
     if not 0 < final_learning_rate <= peak_learning_rate:
         raise ValueError("learning rates must satisfy 0 < final <= peak")
+    if checkpoint_epochs is None:
+        checkpoint_epochs = tuple(
+            point for point in (0.5, 1.0, 2.0, 3.0) if point <= epochs
+        )
     if any(point <= 0 or point > epochs for point in checkpoint_epochs):
         raise ValueError("checkpoint epochs must fall inside the training run")
 

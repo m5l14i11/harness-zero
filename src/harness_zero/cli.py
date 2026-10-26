@@ -168,9 +168,7 @@ def main() -> None:
                 run_name=args.run_name,
                 output_dir=args.output_dir,
                 checkpoint_epochs=(
-                    tuple(args.checkpoint_epochs)
-                    if args.checkpoint_epochs
-                    else (0.5, 1.0, 2.0, 3.0)
+                    tuple(args.checkpoint_epochs) if args.checkpoint_epochs else None
                 ),
                 resume_from=args.resume_from,
             ),
